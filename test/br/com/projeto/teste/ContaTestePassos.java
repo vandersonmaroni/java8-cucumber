@@ -3,6 +3,8 @@ package br.com.projeto.teste;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import javax.inject.Inject;
+
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
@@ -10,14 +12,15 @@ import cucumber.api.java.pt.Quando;
 import cucumber.api.java8.En;
 
 public class ContaTestePassos implements En {
-
+	
+	@Inject
 	private Conta conta;
 	   
     @Dado("^a conta criada para o dono \"(.*?)\" de numero (\\d+) com o limite (\\d+) e saldo (\\d+)$")
     public void a_conta_criada_para_o_dono_de_numero_com_o_limite_e_saldo(String dono, int numero, Double limite,
                  Double saldo) throws Throwable {
           // Definição de conta
-          conta = new Conta(dono, numero, limite, saldo);
+    	conta = new Conta(dono, numero, limite, saldo);
     }
 
     @Quando("^o dono realiza o deposito no valor de (\\d+) na conta$")

@@ -8,6 +8,7 @@
 
 	<properties>
 		<hibernate.version>5.1.0.Final</hibernate.version>
+		<cucumber.version>1.2.4</cucumber.version>
 	</properties>
 
 	<repositories>
@@ -24,13 +25,13 @@
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5-SNAPSHOT</version>
+			<version>${cucumber.version}-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.4</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -42,13 +43,13 @@
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java8</artifactId>
-			<version>1.2.4</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.4</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -99,6 +100,12 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20151123</version>
+		</dependency>
+		<dependency>
+	   		<groupId>javax.enterprise</groupId>
+	   		<artifactId>cdi-api</artifactId>
+	   		<version>1.2</version>
+	   		<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
